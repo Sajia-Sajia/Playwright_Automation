@@ -5,10 +5,10 @@ test('Login Successuful with valid credentials', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
     await page.pause();
 
-    // Enter Username value
+    // Enter a valid username 
     await page.locator('#user-name').fill('standard_user');
 
-    // Enter Password value
+    // Enter a valid password
     await page.locator('#password').fill("secret_sauce");
 
     // Click Login button
@@ -30,10 +30,10 @@ test('Login Failed with incorrect password', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
     await page.pause();
 
-    // Enter Username value
+    // Enter a valid username 
     await page.locator('#user-name').fill('standard_user');
 
-    // Enter incorrect value for password
+    // Enter an invalid password
     await page.locator('#password').fill("false_secret_sauce");
 
     // Click Login button
@@ -52,10 +52,10 @@ test('Login failed with inorrect username', async({page}) => {
     await page.goto('https://www.saucedemo.com/');
     await page.pause();
 
-    // Enter incorrect value for username 
+    // Enter an invalid username 
     await page.locator('#user-name').fill('standard_error_user');
 
-    // Enter Password value
+    // Enter a valid password 
     await page.locator('#password').fill("secret_sauce");
 
     // Click Login button
