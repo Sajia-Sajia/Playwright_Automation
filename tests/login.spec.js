@@ -33,7 +33,7 @@ test('Login Failed with incorrect password', async ({ page }) => {
     // Enter Username value
     await page.locator('#user-name').fill('standard_user');
 
-    // Enter Password value
+    // Enter incorrect value for password
     await page.locator('#password').fill("false_secret_sauce");
 
     // Click Login button
@@ -52,7 +52,7 @@ test('Login failed with inorrect username', async({page}) => {
     await page.goto('https://www.saucedemo.com/');
     await page.pause();
 
-    // Enter Username value
+    // Enter incorrect value for username 
     await page.locator('#user-name').fill('standard_error_user');
 
     // Enter Password value
